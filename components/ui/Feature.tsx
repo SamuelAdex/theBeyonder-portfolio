@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React from 'react';
 import logo22 from '@/public/img/logo 22.png';
 import { RiCheckLine } from 'react-icons/ri';
+import { motion } from 'framer-motion';
 
 
 const Feature = () => {
@@ -41,17 +42,44 @@ const Feature = () => {
         },
     ]
 
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const item = {
+        hidden: { opacity: 0, y: 50 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const } }
+    };
+
     return (
         <section className='bg-linear-360 md:px-0 px-6 grid py-16 place-items-center from-black from-purple-950 to-black'>
             <div className='md:w-[80%] w-full'>
-                <div className="md:space-y-4">
+                <motion.div
+                    className="md:space-y-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
                     <div className="md:text-[45px] text-[30px] md:w-[900px] md:leading-[50px] semibold bg-linear-to-r from-[#c1c1c1] via-[#ffffff] to-[#7b7b7b] bg-clip-text text-transparent animate-gradient">Awesome Things, I've been up to</div>
                     <p className='md:w-[800px] md:text-[16px] text-gray-400 regular'></p>
-                </div>
+                </motion.div>
 
-                <div className='w-full grid md:grid-cols-3 grid-cols-1 gap-6 mt-8'>
+                <motion.div
+                    className='w-full grid md:grid-cols-3 grid-cols-1 gap-6 mt-8'
+                    variants={container}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.1 }}
+                >
                     {projects.map((project, index) => (
-                        <div key={index} className='backdrop-blur-md bg-[rgba(255,255,255,0.1)] border border-gray-500 flex-2 w-full p-6 rounded-[20px]'>
+                        <motion.div key={index} variants={item} className='backdrop-blur-md bg-[rgba(255,255,255,0.1)] border border-gray-500 flex-2 w-full p-6 rounded-[20px]'>
                             <div className='bg-[rgba(255,255,255,0.1)] rounded-[100%] grid place-items-center w-[40px] h-[40px]'>
                                 <RiCheckLine className='text-white' />
                             </div>
@@ -72,9 +100,9 @@ const Feature = () => {
                             >
                                 Visit
                             </a>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     )
