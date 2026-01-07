@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+*{
+  scroll-behavior: smooth;
+}
+
+
+
+@font-face {
+    font-family: GeneralSans;
+    src: url('../public/fonts/GeneralSans-Regular.otf');
+}
+@font-face {
+    font-family: GeneralSemibold;
+    src: url('../public/fonts/GeneralSans-Semibold.otf');
+}
+@font-face {
+    font-family: GeneralBold;
+    src: url('../public/fonts/GeneralSans-Bold.otf');
+}
+
+.regular{
+    font-family: GeneralSans;
+}
+.semibold{
+    font-family: GeneralSemibold;
+}
+.bold{
+    font-family: GeneralBold;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 4s ease infinite;
+}
