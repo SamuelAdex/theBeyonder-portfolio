@@ -15,10 +15,10 @@ const Footer = () => {
         <footer className='bg-linear-180 md:h-[200px] from-black from-purple-950 to-black'>
             <section className='border md:px-20 border-gray-500 flex md:flex-row flex-col md:items-center justify-between mx-auto w-full p-8 backdrop-blur-sm bg-[rgba(255,255,255,0.1)]'>
                 <nav className='flex items-center text-gray-200 gap-12 regular text-[14px] regular'>
-                    <Link href={"#"}>Home</Link>
-                    <Link href={"#"}>About</Link>
-                    <Link href={"#"}>Projects</Link>
-                    <Link href={"#"}>Resume</Link>
+                    <Link href={"#home"}>Home</Link>
+                    <Link href={"#about"}>About</Link>
+                    <Link href={"#project"}>Projects</Link>
+                    <Link target='_blank' href={"https://drive.google.com/file/d/139aeZMJEm6MnFtDzfxBu8NXSpo7CjBs6/view?usp=sharing"}>Resume</Link>
                 </nav>
                 <div className='flex items-center gap-4 md:mt-0 mt-3'>
                     <Link href={"https://x.com/onchainwithAde"} target='_blank' className='backdrop-blur-md border border-gray-500 rounded-[8px] bg-[rgba(255,255,255,0.1)] p-2'>

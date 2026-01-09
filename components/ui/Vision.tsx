@@ -6,7 +6,7 @@ import { RiLink } from 'react-icons/ri';
 
 const Vision = () => {
   return (
-    <section className='bg-black md:py-24 py-12 md:px-0 px-6'>
+    <section id='about' className='bg-black md:py-24 py-12 md:px-0 px-6'>
       <div className='md:w-[80%] flex md:flex-row flex-col mx-auto w-full'>
         <div className='flex-3'>
           <div className='text-white md:text-[25px] text-[30px] regular mt-5'>ABOUT ME</div>

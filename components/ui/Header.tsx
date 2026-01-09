@@ -15,10 +15,10 @@ const Header = () => {
         <header className='fixed w-full top-0 z-20'>
             <section className='md:w-[90%] flex items-center justify-between mx-auto w-full md:p-8 p-6'>
                 <nav className='md:flex hidden items-center border border-gray-500 text-gray-200 gap-12 regular text-[14px] regular backdrop-blur-sm bg-[rgba(255,255,255,0.1)] py-5 px-8 rounded-[80px]'>
-                    <Link href={"#"}>Home</Link>
-                    <Link href={"#"}>About</Link>
-                    <Link href={"#"}>Projects</Link>
-                    <Link href={"#"}>Resume</Link>
+                    <Link href={"#home"}>Home</Link>
+                    <Link href={"#about"}>About</Link>
+                    <Link href={"#project"}>Projects</Link>
+                    <Link target='_blank' href={"https://drive.google.com/file/d/139aeZMJEm6MnFtDzfxBu8NXSpo7CjBs6/view?usp=sharing"}>Resume</Link>
                 </nav>
                 <div className='flex items-center gap-3'>
                     <Link href={"https://x.com/onchainwithAde"} target='_blank' className='backdrop-blur-md border border-gray-500 rounded-[8px] bg-[rgba(255,255,255,0.1)] p-2'>

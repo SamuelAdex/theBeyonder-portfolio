@@ -40,7 +40,7 @@ const Hero = () => {
   };
 
   return (
-    <section className='flex md:flex-row flex-col flex-wrap items-center relative h-screen gap-6 overflow-hidden justify-center md:px-0 px-6 bg-black'>
+    <section id="home" className='flex md:flex-row flex-col flex-wrap items-center relative h-screen gap-6 overflow-hidden justify-center md:px-0 px-6 bg-black'>
       <motion.section
         className='md:space-y-7 relative z-10 md:flex-2 md:pl-[100px]'
         variants={container}

@@ -58,7 +58,7 @@ const Feature = () => {
     };
 
     return (
-        <section className='bg-linear-360 md:px-0 px-6 grid py-16 place-items-center from-black from-purple-950 to-black'>
+        <section id="project" className='bg-linear-360 md:px-0 px-6 grid py-16 place-items-center from-black from-purple-950 to-black'>
             <div className='md:w-[80%] w-full'>
                 <motion.div
                     className="md:space-y-4"
